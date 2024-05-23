@@ -1,0 +1,130 @@
+@import '../../styles/variables.scss';
+
+.side-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 350px;
+    background: $invisible;
+
+    .logo {
+        display: flex;
+        margin-bottom: 32px;
+        background: $invisible;
+
+        .logo-link {
+            background: $invisible;
+
+            .logo-team {
+                width: 70px;
+                background: $invisible;
+            }
+
+            .cross {
+                height: 65px;
+                background: $red;
+            }
+
+            .logo-rjd {
+                height: 65px;
+                background: $invisible;
+            }
+        }
+    }
+
+    .input-bar {
+        padding: 20px;
+        padding-top: 40px;
+        width: 350px;
+        height: 3000px;
+        background: $light-gray;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+
+        .form-data {
+            display: flex;
+            flex-direction: column;
+            background: $invisible;
+            gap: 50px;
+
+            .tittle-form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background: $invisible;
+            }
+
+            .choice-file {
+                display: flex;
+                flex-direction: column;
+                background: $invisible;
+                gap: 23px;
+            }
+
+            .submit {
+                display: flex;
+                justify-content: center;
+                background: $invisible;
+
+                .btn-submit {
+                    width: 180px;
+                }
+            }
+
+            .spinner {
+                display: flex;
+                justify-content: center;
+                width: 65px;
+                margin-left: 122px;
+                animation: rotator $duration linear infinite;
+
+                @keyframes rotator {
+                    0% {
+                        transform: rotate(0deg);
+                    }
+    
+                    100% {
+                        transform: rotate(270deg);
+                    }
+                }
+
+                .path {
+                    stroke-dasharray: $offset;
+                    stroke-dashoffset: 0;
+                    transform-origin: center;
+                    animation:
+                        dash $duration ease-in-out infinite,
+                        colors ($duration*4) ease-in-out infinite;
+                }
+
+                @keyframes colors {
+                    0% {
+                        stroke: $light-red;
+                    }
+    
+                    100% {
+                        stroke: $light-red;
+                    }
+                }
+    
+                @keyframes dash {
+                    0% {
+                        stroke-dashoffset: $offset;
+                    }
+    
+                    50% {
+                        stroke-dashoffset: $offset/4;
+                        transform: rotate(135deg);
+                    }
+    
+                    100% {
+                        stroke-dashoffset: $offset;
+                        transform: rotate(450deg);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,60 @@
+@import '../../styles/variables.scss';
+
+.home-page {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 130px;
+    background: $invisible;
+    gap: 35px;
+    width: calc(100% - 450px - 80px);
+    margin-bottom: 60px;
+
+    .home-name,
+    .guide {
+        color: $white;
+        background: $invisible;
+    }
+
+    .home-name {
+        display: flex;
+        align-items: center;
+        height: 68px;
+
+        @media (width < 1042px) {
+            height: 136px;
+        }
+
+        .emoji {
+            background: $invisible;
+            margin-left: 20px;
+        }
+    }
+
+    .guide,
+    .explanation-model {
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    .guide {
+        .list-steps {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            background: $invisible;
+
+            div {
+                min-width: 300px;
+                height: 210px;
+                flex-grow: 1;
+                flex-basis: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 20px;
+            }
+        }
+    }
+}

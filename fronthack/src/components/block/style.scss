@@ -1,0 +1,8 @@
+@import '../../styles/variables.scss';
+
+.block {
+    background: $light-gray;
+    color: $black;
+    border-radius: 15px;
+    padding: 20px;
+}

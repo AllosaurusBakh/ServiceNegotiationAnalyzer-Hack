@@ -1,0 +1,191 @@
+@import '../../styles/variables.scss';
+
+.result-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 130px;
+    background: $invisible;
+    gap: 40px;
+    width: calc(100% - 450px - 80px);
+
+    .result-name {
+        color: $white;
+        background: $invisible;
+        padding-top: 4px;
+        height: 68px;
+
+        @media (width < 1068px) {
+            height: 136px;
+        }
+    }
+
+    .results {
+        background: $invisible;
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+
+        .block-res {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .list-dashboards {
+                display: flex;
+                flex-direction: column;
+                // flex-wrap: wrap;
+                background: $light-gray;
+                gap: 40px;
+
+                .top-dashboards {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+
+                    .dashboard-1 {
+                        display: flex;
+                        flex-direction: column;
+                        // align-items: center;
+                        background: $white;
+                        flex-grow: 1;
+                        flex-basis: 0;
+                        gap: 20px;
+
+                        .text-file {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            text-align: center;
+                            line-height: 1.5;
+                        }
+                    }
+                }
+
+                .bottom-dashboards {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+
+                    .dashboard-2 {
+                        display: flex;
+                        flex-direction: column;
+                        background: $white;
+                        flex-grow: 1;
+                        flex-basis: 0;
+                        gap: 20px;
+
+                        .text-error {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            text-align: center;
+                            line-height: 1.5;
+                        }
+                    }
+                }
+            }
+
+            .download-results {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-decoration: none;
+                background-color: $light-red;
+                width: 240px;
+                height: 60px;
+                border-radius: 15px;
+                gap: 10px;
+
+                &:hover {
+                    background: $red;
+                    transition: 0.1s;
+                    cursor: pointer;
+                }
+
+                .icon-download {
+                    display: flex;
+                    width: 30px;
+                    background: $invisible;
+                    transform: rotate(180deg);
+                }
+
+                .message-download {
+                    display: flex;
+                    font-size: 20px;
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    .help {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 60px;
+        gap: 40px;
+
+        @media (width < 1250px) {
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .help-text {
+            display: flex;
+            align-items: center;
+
+            @media (width < 1250px) {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .help-message {
+                width: auto;
+    
+                @media (width < 1385px) {
+                    width: 377px;
+                }
+
+                @media (width < 1250px) {
+                    width: auto;
+                    text-align: center;
+                }
+            }
+    
+            .emoji-right {
+                margin-left: 20px;
+
+                @media (width < 1250px) {
+                    display: none;
+                }
+            }
+
+            .emoji-down {
+                display: none;
+
+                @media (width < 1250px) {
+                    display: inline;
+                }
+            }
+        }
+
+        .home {
+            display: flex;
+            justify-content: center;
+            background: $invisible;
+
+            .btn-home {
+                position: static;
+                width: 226px;
+                height: 73px;
+                right: 0;
+            }
+        }
+    }
+}
+
+.link {
+    text-decoration: none;
+}

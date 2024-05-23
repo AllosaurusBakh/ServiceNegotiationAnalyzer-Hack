@@ -1,0 +1,30 @@
+@import '../../styles/variables.scss';
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $light-red;
+    border: 0;
+    border-radius: 15px;
+    height: 60px;
+    gap: 10px;
+    transition: 0.1s;
+    cursor: pointer;
+
+    &:hover {
+        background: $red;
+        transition: 0.1s;
+        cursor: pointer;
+    }
+
+    img {
+        width: 30px;
+        background: $invisible;
+    }
+    
+    .btn-text {
+        color: $white;
+        background-color: $invisible;
+    }
+}

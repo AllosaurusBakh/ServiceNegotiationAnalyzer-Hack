@@ -1,0 +1,122 @@
+@import '../../styles/variables.scss';
+
+.warning-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 130px;
+    background: $invisible;
+    gap: 40px;
+    width: calc(100% - 450px - 80px);
+
+    .warning-box {
+        display: flex;
+        flex-direction: column;
+        color: $white;
+        background: $invisible;
+
+        .warning-name {
+            display: flex;
+            color: $white;
+            background: $invisible;
+            padding-top: 4px;
+            width: 100%;
+            height: 68px;
+    
+            @media (width < 1029px) {
+                height: 136px;
+            }
+
+            @media (width < 870px) {
+                height: 267px;
+            }
+        }
+    
+        .emoji-idn {
+            display: flex;
+            background: $invisible;
+
+            @media (870px <= width < 1029px) {
+                font-size: 100px;
+            }
+
+            @media (width < 870px) {
+                display: none;
+            }
+        }
+    }
+
+    .help {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 60px;
+
+        @media (width < 1250px) {
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .help-text {
+            display: flex;
+            align-items: center;
+
+            @media (width < 1250px) {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .help-message {
+                width: auto;
+    
+                @media (width < 1385px) {
+                    width: 377px;
+                }
+
+                @media (width < 1250px) {
+                    width: auto;
+                    text-align: center;
+                }
+            }
+    
+            .emoji-right {
+                margin-left: 20px;
+
+                @media (width < 1250px) {
+                    display: none;
+                }
+            }
+
+            .emoji-down {
+                display: none;
+
+                @media (width < 1250px) {
+                    display: inline;
+                }
+            }
+        }
+
+        .home {
+            display: flex;
+            justify-content: center;
+            background: $invisible;
+
+            .btn-home {
+                position: absolute;
+                width: 226px;
+                height: 73px;
+                right: 0;
+                top: 311px;
+
+                @media (width < 1250px) {
+                    position: static;
+                }
+            }
+        }
+    }
+}
+
+.link {
+    text-decoration: none;
+}
