@@ -1,26 +1,27 @@
-import './styles/App.scss';
 import SideBar from './components/sideBar/SideBar';
 import HomePage from './pages/homePage/HomePage';
 import ResultPage from './pages/resultPage/ResultPage';
 import WarningPage from './pages/warningPage/WarningPage';
+
 import { Routes, Route } from 'react-router-dom';
 import { useState } from 'react';
 
-export type DataType = [
-    {
-        name: string;
-        text: string;
-        errors: Array<DataErrorsType>
-    }
-]
+import './styles/App.scss';
 
-type DataErrorsType = {
+export type DataType = Array<DataObjType>
+
+export type DataObjType = {
+    name: string;
+    text: string;
+    errors: Array<DataErrorsType>
+}
+
+export type DataErrorsType = {
     name_error: string;
     text_error: string;
 }
 
 const App = () => {
-
     const [data, setData] = useState<DataType>();
 
     return (

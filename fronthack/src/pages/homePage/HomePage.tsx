@@ -1,4 +1,5 @@
 import Block from '../../components/block/Block';
+
 import './style.scss';
 
 const HomePage = (): JSX.Element => {

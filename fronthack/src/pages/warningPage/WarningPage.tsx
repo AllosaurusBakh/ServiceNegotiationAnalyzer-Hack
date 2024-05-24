@@ -1,7 +1,9 @@
 import Button from '../../components/button/Button';
+
 import home from '../../img/home.svg';
-import { Link } from 'react-router-dom';
 import './style.scss';
+
+import { Link } from 'react-router-dom';
 
 const WindowPage = (): JSX.Element => {
     return (

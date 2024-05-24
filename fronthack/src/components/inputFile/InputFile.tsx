@@ -1,6 +1,8 @@
-import { useState, useRef } from 'react';
-import './style.scss';
 import Button from '../button/Button';
+
+import { useState, useRef } from 'react';
+
+import './style.scss';
 
 type InputFileProps = {
     text: string,

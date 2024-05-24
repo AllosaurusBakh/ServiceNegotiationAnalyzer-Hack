@@ -1,13 +1,15 @@
-import { useState } from 'react';
+import Button from '../button/Button';
+import InputFile from '../inputFile/InputFile';
+
 import axios from 'axios';
+import { useState } from 'react';
+import { DataType } from '../../App';
+import { useNavigate, Link } from 'react-router-dom';
+
 import logo from '../../img/logo.png';
 import logoRJD from '../../img/logo_rjd.png';
 import cross from '../../img/black-cross.png';
 import download from '../../img/download.svg';
-import Button from '../button/Button';
-import InputFile from '../inputFile/InputFile';
-import { DataType } from '../../App';
-import { useNavigate, Link } from 'react-router-dom';
 import './style.scss';
 
 type SideBaeProps = {

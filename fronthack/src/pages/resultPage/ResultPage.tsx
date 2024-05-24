@@ -1,8 +1,10 @@
 import Block from '../../components/block/Block';
 import Button from '../../components/button/Button';
-import home from '../../img/home.svg';
-import { DataType } from '../../App';
+
+import { DataType, DataObjType, DataErrorsType } from '../../App';
 import { Link } from 'react-router-dom';
+
+import home from '../../img/home.svg';
 import './style.scss'
 
 type ResultPageProps = {
@@ -16,8 +18,8 @@ const ResultPage = (props: ResultPageProps): JSX.Element => {
             <h1 className="result-name">Результаты вычислений</h1>
 
             <div className="results">
-                {props.data.map((elem: any, indexMain: React.Key) => {
-                    if (elem['errors'] != false) {
+                {props.data.map((elem: DataObjType, indexMain: React.Key) => {
+                    if (elem['errors'].length != 0) {
                         return (
                             <Block className='block-res' key={indexMain}>
                                 <div className='list-dashboards'>
@@ -32,7 +34,7 @@ const ResultPage = (props: ResultPageProps): JSX.Element => {
                                     <div className='bottom-dashboards'>
                                         <h2>❌ Ошибки</h2>
                                         <Block className='dashboard-2'>
-                                            {elem['errors'].map((err: any, indexSecond: number) => {
+                                            {elem['errors'].map((err: DataErrorsType, indexSecond: number) => {
                                                 let keyNameErr = indexSecond + 1;
                                                 return (
                                                     <>
