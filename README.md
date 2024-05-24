@@ -8,7 +8,13 @@
 
 ## Стек
 ### Frontend
+- TypeScript
+- React
+- Vite
+- Axios
 
 ### Backend
+- Python
+- FastAPI
 
 <img width="1591" alt="Снимок экрана 2024-05-24 в 14 39 15" src="https://github.com/AllosaurusBakh/ServiceNegotiationAnalyzer-Hack/assets/95144293/b164b276-d4de-420e-ad46-90325d652a0b">
