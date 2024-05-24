@@ -1,7 +1,7 @@
 import Button from '../button/Button';
 import InputFile from '../inputFile/InputFile';
 
-import axios from 'axios';
+import axios from '../../axios';
 import { useState } from 'react';
 import { DataType } from '../../App';
 import { useNavigate, Link } from 'react-router-dom';
@@ -33,8 +33,8 @@ const SideBar = (props: SideBaeProps): JSX.Element => {
             })
 
             axios({
-                url: `http://127.0.0.1:8000/upload`,
                 method: "POST",
+                url: `/upload`,
                 data: formData,
                 headers: { "Content-Type": "multipart/form-data" }
             })
