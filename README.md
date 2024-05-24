@@ -30,7 +30,7 @@
 ## Результат работы сервиса
 <img width="1591" alt="Снимок экрана 2024-05-24 в 14 39 15" src="https://github.com/AllosaurusBakh/ServiceNegotiationAnalyzer-Hack/assets/95144293/b164b276-d4de-420e-ad46-90325d652a0b">
 
-## Поднятие backend веб-сервисa
+## Поднятие backend
 ### Требования
 * Python 3.x, x >= 9
 * venv
@@ -42,7 +42,7 @@ pip install -r requirements.txt
 uvicorn main:app --reload 
 ```
 
-## Поднятие frontend веб-сервисa
+## Поднятие frontend
 ### Требования
 * npm (менеджер пакетов)
 * node.js
