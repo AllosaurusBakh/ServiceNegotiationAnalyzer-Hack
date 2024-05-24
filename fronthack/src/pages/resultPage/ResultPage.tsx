@@ -1,11 +1,12 @@
 import Block from '../../components/block/Block';
 import Button from '../../components/button/Button';
 import home from '../../img/home.svg';
+import { DataType } from '../../App';
 import { Link } from 'react-router-dom';
 import './style.scss'
 
 type ResultPageProps = {
-    data: Array<object>
+    data: DataType
 }
 
 const ResultPage = (props: ResultPageProps): JSX.Element => {

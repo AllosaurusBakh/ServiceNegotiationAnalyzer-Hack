@@ -11,7 +11,7 @@ type InputFileProps = {
 
 const InputFile = (props: InputFileProps) => {
     const filePicker = useRef(null);
-    const [fileName, setFileName] = useState<string>('');
+    const [fileCount, setFileCount] = useState<number>(0);
 
     const handlePick = () => {
         const picker: any = filePicker.current;
@@ -27,19 +27,12 @@ const InputFile = (props: InputFileProps) => {
             fileList.push(target.files![i])
         }
         props.setFiles(fileList);
-
-        if (file[0].name.length <= 20) {
-            setFileName(file[0].name);
-        }
-        else {
-            let res = file[0].name.slice(0, 13) + '...' + file[0].name.slice(-4);
-            setFileName(res);
-        }
+        setFileCount(file.length);
     };
 
     return (
         <>
-            <Button className="btn-file" type="button" onClick={handlePick} text={fileName == '' ? props.text : fileName}>
+            <Button className="btn-file" type="button" onClick={handlePick} text={fileCount == 0 ? props.text : `Загружено (${fileCount})`}>
                 {props.children}
             </Button>
             <input

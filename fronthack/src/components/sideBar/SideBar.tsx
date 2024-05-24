@@ -6,11 +6,12 @@ import cross from '../../img/black-cross.png';
 import download from '../../img/download.svg';
 import Button from '../button/Button';
 import InputFile from '../inputFile/InputFile';
+import { DataType } from '../../App';
 import { useNavigate, Link } from 'react-router-dom';
 import './style.scss';
 
 type SideBaeProps = {
-    setData: React.Dispatch<React.SetStateAction<Array<object> | undefined>>
+    setData: React.Dispatch<React.SetStateAction<DataType | undefined>>
 };
 
 const SideBar = (props: SideBaeProps): JSX.Element => {

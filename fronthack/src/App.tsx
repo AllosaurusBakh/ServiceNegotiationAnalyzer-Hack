@@ -6,9 +6,22 @@ import WarningPage from './pages/warningPage/WarningPage';
 import { Routes, Route } from 'react-router-dom';
 import { useState } from 'react';
 
+export type DataType = [
+    {
+        name: string;
+        text: string;
+        errors: Array<DataErrorsType>
+    }
+]
+
+type DataErrorsType = {
+    name_error: string;
+    text_error: string;
+}
+
 const App = () => {
 
-    const [data, setData] = useState<Array<object>>();
+    const [data, setData] = useState<DataType>();
 
     return (
         <>
