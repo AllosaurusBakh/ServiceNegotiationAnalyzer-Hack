@@ -12,11 +12,11 @@ import cross from '../../img/black-cross.png';
 import download from '../../img/download.svg';
 import './style.scss';
 
-type SideBaeProps = {
+type SideBarProps = {
     setData: React.Dispatch<React.SetStateAction<DataType | undefined>>
 };
 
-const SideBar = (props: SideBaeProps): JSX.Element => {
+const SideBar = (props: SideBarProps): JSX.Element => {
 
     const [files, setFiles] = useState<File[]>();
     const [loading, setLoading] = useState<boolean>(false);
